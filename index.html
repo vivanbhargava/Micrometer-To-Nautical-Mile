@@ -1,0 +1,21 @@
+<html>
+    <head>
+    <title>Micrometer To Nautical Mile</title>
+</head>
+
+<body style="text-align: center; background: lightgreen; color: blue;">
+
+    <p>
+        <label>Micrometer</label>
+            <input id="inputmicro" type="number" placeholder="Micrometer" oninput="lengthorDistanceConverter(this.value)" onchange="lengthorDistanceConverter(this.value)">
+    </p>
+    <p>Nautical Mile: <span id="outputnm"></span></p>
+
+    <script>
+        function lengthorDistanceConverter(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputnm").innerHTML = valNum / 1.852e+9;
+        }
+    </script>
+
+</body></html>
